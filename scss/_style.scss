@@ -1,0 +1,597 @@
+// Menu Open
+.menu-open {
+  display: none;
+
+  @media screen and (max-width: 1024px) {
+    display: block;
+  }
+}
+
+// Menu
+.menu {
+  padding: 25px;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: $black;
+
+  // Menu Top
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  // Menu Nav
+  &__nav {
+    margin-top: 48px;
+  }
+
+  // Menu List
+  &__list {
+    display: grid;
+    gap: 24px;
+  }
+
+  // Menu Item
+  &__item {
+    font-size: 28px;
+    font-weight: 500;
+
+    text-transform: uppercase;
+  }
+
+  // Menu Link
+  &__link {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+
+      width: 0;
+      height: 2px;
+      bottom: -12px;
+
+      background-color: $white;
+      transition: all .3s ease-in-out;
+    }
+
+    &:hover::before {
+      width: 100%;
+    }
+  }
+
+  // Menu Contacts
+  &__contacts {
+    margin-top: 80px;
+
+    display: grid;
+    gap: 16px;
+
+    // Menu Contacts Link
+    &-link, a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      font-size: 18px;
+      text-decoration: underline;
+    }
+
+    // Menu Contacts Img
+    &-img {
+      width: 20px;
+    }
+  }
+}
+
+// Accordion
+.accordion {
+  display: grid;
+  gap: 32px;
+  max-width: 800px;
+
+  // Accordion Img
+  &__img {
+    transition: all .4s ease-in-out;
+
+    @media screen and (max-width: 680px) {
+      width: 24px;
+    }
+  }
+
+  // Accordion Btn
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &:hover {
+      .accordion__img {
+        transform: rotate(-90deg);
+      }
+    }
+  }
+
+  // Accordion Text
+  &__text {
+    max-width: 600px;
+
+    text-align: left;
+
+    font-size: 32px;
+    font-weight: 500;
+
+    @media screen and (max-width: 680px) {
+      font-size: 18px;
+    }
+  }
+
+  // Accordion List
+  &__list {
+    display: grid;
+    gap: 22px;
+
+    @media screen and (max-width: 680px) {
+      gap: 16px;
+    }
+  }
+
+  // Accordion Item
+  &__item {
+    font-size: 24px;
+    font-weight: 400;
+
+    color: $darkLight;
+
+    @media screen and (max-width: 680px) {
+      font-size: 14px;
+    }
+  }
+}
+
+// Header
+.header {
+  position: relative;
+
+  padding: 25px;
+  color: $white;
+  background-image: url('/images/png/background-desktop.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  // Header Top
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  // Header Nav
+  &__nav {
+    @media screen and (max-width: 1024px) {
+      display: none;
+    }
+  }
+
+  // Header List
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+  }
+
+  // Header Item
+  &__item {
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  // Header Link
+  &__link {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+
+      width: 0;
+      height: 2px;
+      bottom: -12px;
+
+      background-color: $white;
+      transition: all .3s ease-in-out;
+    }
+
+    &:hover::before {
+      width: 100%;
+    }
+  }
+
+  // Header Contacts
+  &__contacts {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    // Header Contacts Link
+    &-link, a {
+      font-size: 18px;
+      font-weight: 500;
+
+      text-decoration: underline;
+    }
+
+    @media screen and (max-width: 1024px) {
+      display: none;
+    }
+  }
+
+  // Header Main
+  &__main {
+    margin-top: 140px;
+
+    @media screen and (max-width: 600px) {
+      margin-top: 80px;
+    }
+  }
+
+  // Header Texts
+  &__texts {
+    display: grid;
+    justify-content: center;
+    gap: 5px;
+
+    // Header Texts Wrapper
+    &-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+  }
+
+  // Header Title
+  &__title {
+    font-size: 80px;
+    font-weight: 500;
+
+    @media screen and (max-width: 800px) {
+      font-size: 60px;
+    }
+
+    @media screen and (max-width: 600px) {
+      font-size: 50px;
+    }
+
+    @media screen and (max-width: 500px) {
+      font-size: 40px;
+    }
+
+    @media screen and (max-width: 430px) {
+      font-size: 28px;
+    }
+  }
+
+  // Header Subtitle
+  &__subtitle {
+    max-width: 286px;
+    font-size: 22px;
+
+    @media screen and (max-width: 1000px) {
+      display: none;
+    }
+
+    // Header Subtitle Media
+    &-media {
+      margin-top: 16px;
+
+      max-width: 286px;
+      font-size: 22px;
+
+      display: none;
+
+      @media screen and (max-width: 1000px) {
+        display: inline-block;
+      }
+    }
+  }
+
+  // Header Bottom
+  &__bottom {
+    margin-top: 200px;
+
+    display: grid;
+    gap: 85px;
+
+    @media screen and (max-width: 600px) {
+      margin-top: 140px;
+      gap: 60px;
+    }
+
+    @media screen and (max-width: 430px) {
+      gap: 32px;
+    }
+  }
+
+  // Header Address
+  &__address {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    // Header Address Text
+    &-text {
+      font-size: 18px;
+      font-weight: 300;
+
+      text-transform: uppercase;
+      color: $gray;
+
+      @media screen and (max-width: 600px) {
+        font-size: 16px;
+      }
+
+      @media screen and (max-width: 430px) {
+        font-size: 12px;
+      }
+    }
+  }
+
+  // Header Line
+  &__line {
+    width: 100%;
+    height: 1px;
+
+    background-color: $white;
+  }
+
+  // Header Text
+  &__text {
+    max-width: 600px;
+
+    font-size: 32px;
+    font-weight: 300;
+
+    @media screen and (max-width: 600px) {
+      font-size: 24px;
+    }
+
+    @media screen and (max-width: 430px) {
+      font-size: 14px;
+    }
+  }
+}
+
+// Main
+.main {
+  padding: 25px;
+
+  // Main Wrapper
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width: 1024px) {
+      display: grid;
+      align-items: baseline;
+      justify-content: center;
+      gap: 32px;
+    }
+  }
+
+  // Main Title
+  &__title {
+    max-width: 415px;
+
+    font-size: 40px;
+    font-weight: 500;
+
+    @media screen and (max-width: 680px) {
+      font-size: 24px;
+    }
+  }
+
+  // Main Accordions
+  &__accordions {
+    display: grid;
+    gap: 56px;
+  }
+}
+
+// Services
+.services {
+  margin-top: 125px;
+
+  @media screen and (max-width: 680px) {
+    margin-top: 80px;
+  }
+}
+
+// Background
+.background {
+  margin-top: 132px;
+
+  display: flex;
+  justify-content: center;
+
+  @media screen and (max-width: 680px) {
+    margin-top: 80px;
+  }
+}
+
+// About
+.about {
+  margin-top: 132px;
+
+  @media screen and (max-width: 680px) {
+    margin-top: 80px;
+  }
+
+  // About Texts
+  &__texts {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: right;
+    gap: 40px;
+
+    @media screen and (max-width: 680px) {
+      justify-content: baseline;
+      gap: 16px;
+    }
+  }
+
+  // About Block
+  &__block {
+    max-width: 415px;
+
+    display: grid;
+    gap: 10px;
+  }
+
+  // About Title
+  &__title {
+    font-size: 80px;
+    font-weight: 300;
+
+    color: $dark;
+
+    @media screen and (max-width: 680px) {
+      font-size: 40px;
+    }
+  }
+
+  // About Subtitle
+  &__subtitle {
+    max-width: 380px;
+
+    font-size: 18px;
+    color: $darkLight;
+
+    @media screen and (max-width: 680px) {
+      font-size: 14px;
+    }
+  }
+}
+
+// Answers
+.answers {
+  margin-top: 196px;
+
+  @media screen and (max-width: 680px) {
+    margin-top: 80px;
+  }
+}
+
+.footer {
+  margin-top: 156px;
+  padding: 40px;
+
+  color: $white;
+  background-color: $black;
+
+  // Footer Inner {
+  &__inner {
+    display: flex;
+    gap: 45px;
+
+    @media screen and (max-width: 845px) {
+      display: grid;
+      gap: 25px;
+    }
+  }
+
+  // Footer Title
+  &__title {
+    max-width: 310px;
+
+    font-size: 48px;
+    font-weight: 500;
+
+    @media screen and (max-width: 680px) {
+      font-size: 28px;
+    }
+  }
+
+  // Footer Contacts
+  &__contacts {
+    display: grid;
+    gap: 16px;
+  }
+
+  // Footer Link
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    font-size: 26px;
+
+    @media screen and (max-width: 680px) {
+      font-size: 18px;
+    }
+
+    @media screen and (max-width: 375px) {
+      font-size: 14px;
+    }
+  }
+
+  // Footer Icon
+  &__ico {
+    @media screen and (max-width: 680px) {
+      width: 20px;
+    }
+
+    @media screen and (max-width: 375px) {
+      width: 14px;
+    }
+  }
+
+  // Footer Line
+  &__line {
+    margin-top: 70px;
+    margin-bottom: 32px;
+
+    width: 100%;
+    height: 1px;
+
+    background-color: $white;
+
+    @media screen and (max-width: 680px) {
+      margin-top: 40px;
+    }
+  }
+
+  // Footer Bottom
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media screen and (max-width: 340px) {
+      display: grid;
+      gap: 10px;
+    }
+  }
+
+  // Footer Txt
+  &__txt {
+    font-size: 18px;
+    font-weight: 300;
+
+    text-transform: uppercase;
+    color: $gray;
+
+    @media screen and (max-width: 680px) {
+      font-size: 12px;
+    }
+  }
+}

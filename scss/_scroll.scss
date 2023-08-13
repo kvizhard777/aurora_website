@@ -1,0 +1,16 @@
+// Scroll
+::-webkit-scrollbar{
+  width: 6px;
+  border-radius: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: $backgroundColor;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 6px;
+  border-radius: 12px;
+
+  background-color: $scrollColor;
+}
