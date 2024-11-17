@@ -100,6 +100,7 @@
 
   // Accordion Img
   &__img {
+    transform: rotate(-90deg);
     transition: all .4s ease-in-out;
 
     @media screen and (max-width: 680px) {
@@ -115,7 +116,7 @@
 
     &:hover {
       .accordion__img {
-        transform: rotate(-90deg);
+        transform: rotate(45deg);
       }
     }
   }
